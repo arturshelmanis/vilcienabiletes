@@ -1,2 +1,2 @@
-#Projekta darbs
+# Projekta darbs
 #### Projekta uzdevums
