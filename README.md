@@ -11,3 +11,5 @@ Uzdevums ir izveidot pilnvērtīgu programmatūru, kas varētu automatizēt vien
 * pathlib - tiek izmantots, lai varētu norādīt, kurā mapē ir saglabāti PDF faili, lai pēc tam varētu šos failus nolasīt ar PyPDF2
 * openpyxl - tiek izmantots, lai varētu izveidot EXCEL (.xlsx) datni un rakstīt tajā
 ### Progrmammatūras izmantošanas metodes
+Pirms sākat izmantot programmu ir nepieciešams veikt sekojošas darbības:
+_* Veikt izmaiņas failā **user_login**
