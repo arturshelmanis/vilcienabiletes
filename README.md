@@ -12,4 +12,4 @@ Uzdevums ir izveidot pilnvērtīgu programmatūru, kas varētu automatizēt vien
 * openpyxl - tiek izmantots, lai varētu izveidot EXCEL (.xlsx) datni un rakstīt tajā
 ### Progrmammatūras izmantošanas metodes
 Pirms sākat izmantot programmu ir nepieciešams veikt sekojošas darbības:
-_* Veikt izmaiņas failā **user_login**
+    * Veikt izmaiņas failā **user_login**
