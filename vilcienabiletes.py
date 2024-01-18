@@ -5,7 +5,7 @@ from datetime import datetime
 import pandas as pd
 import PyPDF2
 import pathlib
-from openpyxl import Workbook, load_workbook
+from openpyxl import Workbook
 from user_login import *
 
 # Lejupielādē vilciena biļetes no e-pasta
