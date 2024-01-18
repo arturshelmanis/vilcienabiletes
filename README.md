@@ -12,4 +12,5 @@ Uzdevums ir izveidot pilnvērtīgu programmatūru, kas varētu automatizēt vien
 * openpyxl - tiek izmantots, lai varētu izveidot EXCEL (.xlsx) datni un rakstīt tajā
 ### Progrmammatūras izmantošanas metodes
 Pirms sākat izmantot programmu ir nepieciešams veikt sekojošas darbības:
-    * Veikt izmaiņas failā **user_login**
+* Veikt izmaiņas failā **user_login**, mainīgā my_email vertībai piešķirt e-pasta adresi, no kuras nepieciešams lejupielādēt failus, mainīga password_key vērtībai piešķirt IMAP paroli
+* Lai uzinstalētu vajadzīgās Python bibilotēkas, termināli nepieciešams iekopēt > pip install -r requirements.txt
