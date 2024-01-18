@@ -13,4 +13,5 @@ Uzdevums ir izveidot pilnvērtīgu programmatūru, kas varētu automatizēt vien
 ### Progrmammatūras izmantošanas metodes
 Pirms sākat izmantot programmu ir nepieciešams veikt sekojošas darbības:
 * Veikt izmaiņas failā **user_login**, mainīgā my_email vertībai piešķirt e-pasta adresi, no kuras nepieciešams lejupielādēt failus, mainīga password_key vērtībai piešķirt IMAP paroli
-* Lai uzinstalētu vajadzīgās Python bibilotēkas, termināli nepieciešams iekopēt > pip install -r requirements.txt
+* Lai uzinstalētu vajadzīgās Python bibilotēkas, termināli nepieciešams iekopēt
+> pip install -r requirements.txt
