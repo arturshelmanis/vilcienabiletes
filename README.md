@@ -10,12 +10,13 @@ Uzdevums ir izveidot pilnvērtīgu programmatūru, kas varētu automatizēt vien
 * PyPDF2 - tiek izmantots, lai varētu lasīt PDF failā esošo tekstu
 * pathlib - tiek izmantots, lai varētu norādīt, kurā mapē ir saglabāti PDF faili, lai pēc tam varētu šos failus nolasīt ar PyPDF2
 * openpyxl - tiek izmantots, lai varētu izveidot EXCEL (.xlsx) datni un rakstīt tajā
-### Progrmammatūras izmantošanas metodes
+### Programmatūras izmantošanas metodes
 Pirms sākat izmantot programmu ir nepieciešams veikt sekojošas darbības:
 * Veikt izmaiņas failā **user_login**, mainīgā my_email vertībai piešķirt e-pasta adresi, no kuras nepieciešams lejupielādēt failus, mainīga password_key vērtībai piešķirt IMAP paroli
 * Lai uzinstalētu vajadzīgās Python bibilotēkas, termināli nepieciešams iekopēt **pip install -r requirements.txt**. Ja nu gadījumā Jūs izmantojat vecāku python versiju, kādu bibliotēku var nākties instalēt atsevišķi terminālī ierakstot **pip install "bilbiotēkas nosaukums"**
 
-Šo programmatūru var izmantotu, lai apstrādātu vilciena biļetes, kas pirktas tieši Mobilly aplikācijā un tādā veidā atvieglotu finanšu līdzekļu uzskaiti. Manuāla darba vietā var palaist šo python skriptu, kas šo darbu spēj izdarīt vien pāris sekundēs.
+Šo programmatūru var izmantot, lai apstrādātu vilciena biļetes, kas pirktas tieši Mobilly aplikācijā un tādā veidā atvieglotu finanšu līdzekļu uzskaiti. Manuāla darba vietā var palaist šo python skriptu, kas šo darbu spēj izdarīt vien pāris sekundēs.
+
 Palaižot skriptu vispirms tiek paprasīts perioda sākuma un beigu datums konkrētā formātā, par kuru vēlaties iegūt datus. Tad mapē Vilciena_Biletes tiek lejupielādēti pielikumi, kas sūtīti no e-pasta adrese **info@mobilly.lv** ievadītajā laika periodā. Pēc tam tiek veikta informācijas nolasīšana no PDF faila, tiek nolasīta cena un datums, kurā konkrētais reiss ir veikts. Pēdējais posms ir informācijas ierakstīšana EXCEL datnē, uzskatāmā veidā. Reisi tiek sadalīti pa mēnešiem un par katru reisu tiek pievienota, cik šis reiss ir izmaksājis. Tiek arī veikti aprēķini par braucienu skaitu mēnesī, kopējo summu, kas konkrētajā mēnesī ir samaksāta un vidējo cenu par braucienu. Visa informācija tiek saglabāta EXCEL failā **vilcienaizmaksas.xlsx**.
 
 Programmatūru ir iespējams izmantot arī, lai nolasītu informāciju par jau ierīcē lejupielādētām vilciena biļetēm. Šajā gadījumā ir nepieciešams izkomentēt ārā daļu, kas ir paredzēta biļešu lejupielādēšanai no e-pasta un visas biļetes jāievieto mapē **Vilciena_Biletes**.
