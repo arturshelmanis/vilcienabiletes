@@ -5,10 +5,10 @@ from datetime import datetime
 import pandas as pd
 import PyPDF2
 import pathlib
-import time
 from openpyxl import Workbook, load_workbook
 from user_login import *
 
+# Lejupielādē vilciena biļetes no e-pasta
 folder_name = "Vilciena_Biletes"
 if not os.path.exists(folder_name):
     os.makedirs(folder_name, mode=0o777)
@@ -62,8 +62,7 @@ for i in list_of_tickets:
 print("Iegūtās biļetes par laika periodu tika saglabātas mapē Vilciena_Biletes")
 my_mail.logout()
 
-#Sākas PDF failu lasīšana
-
+#PDF faila lasīšana 
 from_which =  datetime.strptime(from_which, "%d-%b-%Y")
 to_which =  datetime.strptime(to_which, "%d-%b-%Y")
 
@@ -71,7 +70,6 @@ months_list =pd.date_range(from_which, to_which, freq='MS').strftime("%m.%Y|%B")
 
 adrese = pathlib.Path("Vilciena_Biletes")
 visi_faili = list(adrese.glob("*.pdf"))
-viss_kopa = 0
 data = []
 for f in range(len(visi_faili)):
 
@@ -92,19 +90,14 @@ for f in range(len(visi_faili)):
     
     end_postition = start_position + 10
     datums = text[start_position : end_postition].rstrip()
-
-    #print(f"Datums: {datums}, summma: {kopeja_summa}")
     data.append([datums, kopeja_summa])
-    viss_kopa += 1
-    #print(text)
-    
-print(viss_kopa)
 
+# Informācijas rakstīšana Excel (.xlsx) datnē
 wb = Workbook()
 ws = wb.active 
 
 count = 1
-collumn_char = 65
+collumn_char = 66
 for month in months_list:
     if count > 1:
         collumn_char = collumn_char + 1
@@ -118,6 +111,28 @@ for month in months_list:
                 ws[str(chr(collumn_char)) + str(count)].value = month[8:] + ", " + month[3:7]
             count += 1
             ws[str(chr(collumn_char)) + str(count)].value = float(ticket[1])
+        
+max_row = ws.max_row
+max_col = ws.max_column
+for col in range(66, 66 + max_col - 1):
+    sum = 0
+    count = 0
+    for i in range(2, max_row + 1):
+        cena = ws[str(chr(col)) + str(i)].value
+        if cena != None:
+            print(cena)
+            sum += float(cena)
+            count += 1
+    ws[str(chr(col)) + str(max_row + 2)].value = count
+    ws[str(chr(col))+ str(max_row + 3)].value = sum
+    ws[str(chr(col)) + str(max_row + 4)].value = sum / count
+
+ws['A' + str(1)].value = "Mēnesis"
+for i in range(2,max_row + 1):
+    ws['A' + str(i)].value = i-1
+ws['A' + str(max_row + 2)].value = "Braucienu skaits"
+ws['A' + str(max_row + 3)].value = "Kopējā summa"
+ws['A' + str(max_row + 4)].value = "Vidēji par braucienu"
 
 wb.save("vilcienaizmaksas.xlsx")
 wb.close()
