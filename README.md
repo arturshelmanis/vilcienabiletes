@@ -20,3 +20,5 @@ Pirms sākat izmantot programmu ir nepieciešams veikt sekojošas darbības:
 Palaižot skriptu vispirms tiek paprasīts perioda sākuma un beigu datums konkrētā formātā, par kuru vēlaties iegūt datus. Tad mapē Vilciena_Biletes tiek lejupielādēti pielikumi, kas sūtīti no e-pasta adreses **info@mobilly.lv** ievadītajā laika periodā. Pēc tam tiek veikta informācijas nolasīšana no PDF faila, tiek nolasīta cena un datums, kurā konkrētais reiss ir veikts. Pēdējais posms ir informācijas ierakstīšana EXCEL datnē, uzskatāmā veidā. Reisi tiek sadalīti pa mēnešiem un par katru reisu tiek pievienota informācija, cik šis reiss ir izmaksājis. Tiek arī veikti aprēķini par braucienu skaitu mēnesī, kopējo summu, kas konkrētajā mēnesī ir samaksāta un vidējo cenu par braucienu. Visa informācija tiek saglabāta EXCEL failā **vilcienaizmaksas.xlsx**.
 
 Programmatūru ir iespējams izmantot arī, lai nolasītu informāciju par jau ierīcē lejupielādētām vilciena biļetēm. Šajā gadījumā ir nepieciešams izkomentēt ārā daļu, kas ir paredzēta biļešu lejupielādēšanai no e-pasta un visas biļetes jāievieto mapē **Vilciena_Biletes**.
+
+Video saite uz programmas darbību: https://youtu.be/QDWA6I7goew
