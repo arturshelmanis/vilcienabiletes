@@ -120,7 +120,6 @@ for col in range(66, 66 + max_col - 1):
     for i in range(2, max_row + 1):
         cena = ws[str(chr(col)) + str(i)].value
         if cena != None:
-            print(cena)
             sum += float(cena)
             count += 1
     ws[str(chr(col)) + str(max_row + 2)].value = count
